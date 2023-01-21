@@ -18,12 +18,14 @@ telescope.setup {
             case_mode = 'smart_case',
         },
         repo = {
-            fd_opts = {
-                '--no-ignore-vcs',
-            },
-            search_dirs = {
-                '~/Work/'
-            },
+            list = {
+                fd_opts = {
+                    '--no-ignore-vcs',
+                },
+                search_dirs = {
+                    '~/Work/projects/'
+                },
+            }
         }
     }
 }

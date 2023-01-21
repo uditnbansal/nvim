@@ -1,6 +1,7 @@
 local opt = vim.opt -- for conciseness
 local cmd = vim.cmd
 
+opt.background = "dark"
 opt.backspace = "indent,eol,start"
 opt.cursorline = true
 opt.equalalways = false
@@ -25,4 +26,4 @@ opt.wildignorecase = true
 opt.wildmenu = true
 opt.wrap = false
 
-cmd("colorscheme carbonfox")
+cmd("colorscheme gruvbox")
