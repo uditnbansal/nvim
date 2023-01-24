@@ -1,6 +1,22 @@
 require('lualine').setup({
     options = {
-        theme = 'moonfly',
+        theme = 'gruvbox_dark',
         section_separators = { left = '', right = '' }
+    },
+    sections = {
+        lualine_c = {
+            {
+                'filename',
+                path = 1
+            }
+        }
+    },
+    inactive_sections = {
+        lualine_c = {
+            {
+                'filename',
+                path = 1
+            }
+        }
     }
 })

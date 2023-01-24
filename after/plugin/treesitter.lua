@@ -1,4 +1,6 @@
-require'nvim-treesitter.configs'.setup {
+local opt = vim.opt
+
+require('nvim-treesitter.configs').setup {
     -- A list of parser names, or "all" (the four listed parsers should always be installed)
     ensure_installed = { "c", "lua", "vim", "help" },
 
@@ -20,3 +22,6 @@ require'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = false,
     },
 }
+
+opt.foldmethod = 'expr'
+opt.foldexpr = 'nvim_treesitter#foldexpr()'

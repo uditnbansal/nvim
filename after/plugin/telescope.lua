@@ -18,14 +18,23 @@ telescope.setup {
             case_mode = 'smart_case',
         },
         repo = {
-            fd_opts = {
-                '--no-ignore-vcs',
-            },
-            search_dirs = {
-                '~/Work/'
-            },
+            list = {
+                fd_opts = {
+                    '--no-ignore-vcs',
+                },
+                search_dirs = {
+                    '/apps/northmoorefs1/udit/dev/'
+                },
+                tail_path = true,
+            }
         }
-    }
+    },
+    -- file_ignore_patterns = {
+    --     '_build',
+    --     '_build.cx5',
+    --     'nbin.opteron',
+    --     'nbin.opteron_rhel6',
+    -- }
 }
 
 telescope.load_extension('fzf')

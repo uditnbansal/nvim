@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     }
     use('EdenEast/nightfox.nvim')
     use('tomasiser/vim-code-dark')
+    use('ellisonleao/gruvbox.nvim')
 
     -- Treesitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -68,6 +69,9 @@ return require('packer').startup(function(use)
     use('tpope/vim-surround')
     use('tpope/vim-unimpaired')
 
+    -- fswitch
+    use('derekwyatt/vim-fswitch')
+
     -- file-explorer
     use {
         'nvim-tree/nvim-tree.lua',
@@ -105,4 +109,14 @@ return require('packer').startup(function(use)
             }
         end
     }
+
+    -- bufferline
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "v3.*",
+        requires = 'nvim-tree/nvim-web-devicons'
+    }
+
+    -- tmux integration
+    use('numToStr/Navigator.nvim')
 end)
