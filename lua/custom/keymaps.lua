@@ -8,6 +8,7 @@ local hop = require('hop')
 local directions = require('hop.hint').HintDirection
 local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
+local tmux_nav = require('nvim-tmux-navigation')
 
 -- insert mode
 keymap.set('i', '<C-a>', '<C-o>^')
@@ -18,10 +19,10 @@ keymap.set('i', 'jj', '<Esc>')
 
 -- normal mode
 keymap.set('n', ';', ':')
-keymap.set('n', '<C-h>', '<C-w>h')
-keymap.set('n', '<C-j>', '<C-w>j')
-keymap.set('n', '<C-k>', '<C-w>k')
-keymap.set('n', '<C-l>', '<C-w>l')
+keymap.set('n', '<C-h>', tmux_nav.NvimTmuxNavigateLeft)
+keymap.set('n', '<C-j>', tmux_nav.NvimTmuxNavigateDown)
+keymap.set('n', '<C-k>', tmux_nav.NvimTmuxNavigateUp)
+keymap.set('n', '<C-l>', tmux_nav.NvimTmuxNavigateRight)
 keymap.set('n', '<Leader>/', '/\\<\\><Left><Left>')
 keymap.set('n', '<Leader><Leader>b', function() hop.hint_words({ direction = directions.BEFORE_CURSOR }) end)
 keymap.set('n', '<Leader><Leader>j', function() hop.hint_lines({ direction = directions.AFTER_CURSOR }) end)

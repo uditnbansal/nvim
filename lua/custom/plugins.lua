@@ -106,4 +106,7 @@ return require('packer').startup(function(use)
             }
         end
     }
+
+    -- tmux navigator
+    use { "alexghergh/nvim-tmux-navigation" }
 end)
