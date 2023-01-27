@@ -1,6 +1,6 @@
 require('lualine').setup({
     options = {
-        theme = 'gruvbox-material',
+        theme = 'onedark',
         section_separators = { left = '', right = '' }
     },
     sections = {

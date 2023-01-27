@@ -1,8 +1,8 @@
 local opt = vim.opt -- for conciseness
 local cmd = vim.cmd
 
-opt.background = "dark"
-opt.backspace = "indent,eol,start"
+opt.background = 'dark'
+opt.backspace = 'indent,eol,start'
 opt.cursorline = true
 opt.equalalways = false
 opt.expandtab = true
@@ -25,5 +25,3 @@ opt.visualbell = true
 opt.wildignorecase = true
 opt.wildmenu = true
 opt.wrap = false
-
-cmd("colorscheme gruvbox")
