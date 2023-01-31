@@ -119,4 +119,12 @@ return require('packer').startup(function(use)
 
     -- tmux integration
     use('numToStr/Navigator.nvim')
+
+    -- neoclip
+    use {
+      "AckslD/nvim-neoclip.lua",
+      requires = {
+        {'nvim-telescope/telescope.nvim'},
+      }
+    }
 end)
