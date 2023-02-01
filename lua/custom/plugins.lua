@@ -23,6 +23,10 @@ return require('packer').startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine'
     }
+    use {
+      'catppuccin/nvim',
+      as = 'catppuccin'
+    }
     use('EdenEast/nightfox.nvim')
     use('tomasiser/vim-code-dark')
     use('ellisonleao/gruvbox.nvim')
@@ -97,19 +101,6 @@ return require('packer').startup(function(use)
         branch = 'v2', -- optional but strongly recommended
     }
 
-    -- focus coding
-    -- Lua
-    use {
-        "folke/twilight.nvim",
-        config = function()
-            require("twilight").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    }
-
     -- bufferline
     use {
         'akinsho/bufferline.nvim',
@@ -127,4 +118,7 @@ return require('packer').startup(function(use)
         {'nvim-telescope/telescope.nvim'},
       }
     }
+
+    -- indentline
+    use('lukas-reineke/indent-blankline.nvim')
 end)

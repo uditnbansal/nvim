@@ -26,5 +26,3 @@ opt.visualbell = true
 opt.wildignorecase = true
 opt.wildmenu = true
 opt.wrap = false
-
-cmd("colorscheme gruvbox")

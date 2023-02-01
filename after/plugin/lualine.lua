@@ -1,6 +1,6 @@
 require('lualine').setup({
     options = {
-        theme = 'gruvbox_dark',
+        theme = 'catppuccin',
         section_separators = { left = '', right = '' }
     },
     sections = {
