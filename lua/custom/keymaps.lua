@@ -3,6 +3,7 @@ vim.g.mapleader = ","
 local keymap = vim.keymap
 local cmd = vim.cmd
 local lsp = vim.lsp
+local diagnostic = vim.diagnostic
 
 local hop = require('hop')
 local directions = require('hop.hint').HintDirection
@@ -28,8 +29,10 @@ keymap.set('n', '<Leader><Leader>b', function() hop.hint_words({ direction = dir
 keymap.set('n', '<Leader><Leader>j', function() hop.hint_lines({ direction = directions.AFTER_CURSOR }) end)
 keymap.set('n', '<Leader><Leader>k', function() hop.hint_lines({ direction = directions.BEFORE_CURSOR }) end)
 keymap.set('n', '<Leader><Leader>w', function() hop.hint_words({ direction = directions.AFTER_CURSOR }) end)
+keymap.set('n', '<Leader><Space>', diagnostic.open_float, {})
 keymap.set('n', '<Leader><Tab>', ':Scratch<CR>')
 keymap.set('n', '<Leader>F', lsp.buf.format, {})
+keymap.set('n', '<Leader>N', ':NvimTreeOpen $PWD<CR>')
 keymap.set('n', '<Leader>S', ':source<CR>')
 keymap.set('n', '<Leader>`', ':NvimTreeOpen ~/.config/nvim/<CR>')
 keymap.set('n', '<Leader>b<Space>', ':sp<CR>')
@@ -43,13 +46,13 @@ keymap.set('n', '<Leader>bs', ':buffers<CR>')
 keymap.set('n', '<Leader>cw', ':echo getcwd()<CR>')
 keymap.set('n', '<Leader>dg', ':diffget<CR>')
 keymap.set('n', '<Leader>e', ':e<Space>')
+keymap.set('n', '<Leader>f<Space>', telescope_builtin.resume, {})
 keymap.set('n', '<Leader>fb', telescope_builtin.buffers, {})
 keymap.set('n', '<Leader>ff', telescope_builtin.find_files, {})
 keymap.set('n', '<Leader>fg', telescope_builtin.live_grep, {})
 keymap.set('n', '<Leader>fh', telescope_builtin.help_tags, {})
-keymap.set('n', '<Leader>fh', telescope_builtin.help_tags, {})
+keymap.set('n', '<Leader>fk', telescope_builtin.keymaps, {})
 keymap.set('n', '<Leader>fr', telescope.extensions.repo.list, {})
-keymap.set('n', '<Leader>f<Space>', telescope_builtin.resume, {})
 keymap.set('n', '<Leader>ga', ':Git add %:p<CR><CR>')
 keymap.set('n', '<Leader>gbb', ':Git b<CR>')
 keymap.set('n', '<Leader>gbl', ':Git blame -w<CR>')
@@ -71,7 +74,6 @@ keymap.set('n', '<Leader>gst', ':Git status<CR>')
 keymap.set('n', '<Leader>gw', ':Gwrite<CR>')
 keymap.set('n', '<Leader>h', ':sp<CR>')
 keymap.set('n', '<Leader>n', ':NvimTreeToggle<CR>')
-keymap.set('n', '<Leader>N', ':NvimTreeOpen $PWD<CR>')
 keymap.set('n', '<Leader>pc', ':PackerClean<CR>')
 keymap.set('n', '<Leader>pi', ':PackerInstall<CR>')
 keymap.set('n', '<Leader>ps', ':PackerStatus<CR>')

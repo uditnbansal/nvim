@@ -1,5 +1,4 @@
 local opt = vim.opt -- for conciseness
-local cmd = vim.cmd
 
 opt.background = 'dark'
 opt.backspace = 'indent,eol,start'
