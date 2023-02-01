@@ -27,6 +27,10 @@ return require('packer').startup(function(use)
     use('tomasiser/vim-code-dark')
     use('ellisonleao/gruvbox.nvim')
     use('navarasu/onedark.nvim')
+    use {
+        'catppuccin/nvim',
+        as = 'catppuccin'
+    }
 
     -- Treesitter
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -98,9 +102,9 @@ return require('packer').startup(function(use)
     -- focus coding
     -- Lua
     use {
-        "folke/twilight.nvim",
+        'folke/twilight.nvim',
         config = function()
-            require("twilight").setup {
+            require('twilight').setup {
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
                 -- refer to the configuration section below
@@ -109,5 +113,8 @@ return require('packer').startup(function(use)
     }
 
     -- tmux navigator
-    use { "alexghergh/nvim-tmux-navigation" }
+    use { 'alexghergh/nvim-tmux-navigation' }
+
+    -- indentline
+    use { 'lukas-reineke/indent-blankline.nvim' }
 end)
