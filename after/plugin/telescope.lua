@@ -1,4 +1,3 @@
-local builtin = require('telescope.builtin')
 local telescope = require('telescope')
 
 telescope.setup {

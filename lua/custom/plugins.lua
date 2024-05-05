@@ -119,4 +119,7 @@ return require('packer').startup(function(use)
 
     -- indentline
     use { 'lukas-reineke/indent-blankline.nvim' }
+
+    -- floatterm
+    use { 'voldikss/vim-floaterm' }
 end)
