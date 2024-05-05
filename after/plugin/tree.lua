@@ -1,7 +1,3 @@
--- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
@@ -11,11 +7,6 @@ require("nvim-tree").setup({
     prefer_startup_root = true,
     view = {
         adaptive_size = true,
-        mappings = {
-            list = {
-                { key = "u", action = "dir_up" },
-            },
-        },
         float = {
             enable = true
         }
